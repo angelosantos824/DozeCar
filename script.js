@@ -47,23 +47,29 @@ window.onload = function() {
     // ==========================================
     // 3. FUNCIONALIDADES DA ÁREA DO CLIENTE
     // ==========================================
-    const btnCopy = document.querySelector('.btn-copy');
-    if (btnCopy) {
-        btnCopy.onclick = function() {
-            const ibanText = this.parentElement.querySelector('strong').innerText;
-            navigator.clipboard.writeText(ibanText).then(() => {
-                const originalText = this.innerText;
-                this.innerText = "COPIADO!";
-                this.style.background = "#2ecc71";
-                setTimeout(() => {
-                    this.innerText = originalText;
-                    this.style.background = "#e74c3c";
-                }, 2000);
-            });
-        };
-    }
-};
+function copiarIBAN() {
+    // 1. Pega o texto do elemento pelo ID
+    const iban = document.getElementById("ibanText").innerText;
 
+    // 2. Tenta copiar para a área de transferência
+    navigator.clipboard.writeText(iban).then(() => {
+        // 3. Feedback visual (opcional, mas muito bom)
+        const btn = document.querySelector(".btn-copy");
+        const textoOriginal = btn.innerText;
+        
+        btn.innerText = "✅ Copiado!";
+        btn.style.background = "#27ae60"; // Muda para verde
+
+        // Volta ao normal depois de 2 segundos
+        setTimeout(() => {
+            btn.innerText = textoOriginal;
+            btn.style.background = "#e74c3c"; // Volta ao vermelho da DOZE CAR
+        }, 2000);
+    }).catch(err => {
+        console.error("Erro ao copiar: ", err);
+        alert("Não foi possível copiar o IBAN automaticamente.");
+    });
+}
 const noticiasCompletas = {
     'dicas': `
         <div class="noticia-tag">Manutenção</div>

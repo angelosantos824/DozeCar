@@ -43,6 +43,7 @@ window.onload = function() {
             }
         });
     }
+};
 
     // ==========================================
     // 3. FUNCIONALIDADES DA ÁREA DO CLIENTE

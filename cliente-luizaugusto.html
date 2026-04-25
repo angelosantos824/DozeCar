@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Cliente | DOZE CAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+<header class="navbar">
+    <div class="logo">DOZE <span>CAR</span></div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="btn-logout">Terminar Sessão</a></li>
+        </ul>
+    </nav>
+</header>
+    <main class="container-dash">
+        <section class="user-header">
+            <div class="user-info">
+                <h1>Olá, <span>Luiz Augusto</span></h1>
+                <p>NIF: 327254440 | Contato: 927028074</p>
+                <p>📍 Rua Armando Santos Neto, 3, Ponte de Vagos - Vagos</p>
+            </div>
+            <div class="user-badge">Cliente Premium</div>
+        </section>
+
+        <div class="dash-grid">
+            <section class="dash-card vehicle-details">
+                <h3>Meu Veículo</h3>
+                <div class="car-spec">
+                    <div class="car-info-text">
+                        <h4>Renault Clio DCi 1.5 BI-61-NV</h4>
+                        <p>Ano: 2015 | Carrinha</p>
+                        <p class="chassis-text">Chassis: <span>VF17R040H52259495</span></p>
+                        <p class="purchase-date">Comprado em: 18/12/2025</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dash-card finance-summary">
+                <h3>Resumo Financeiro</h3>
+                <div class="finance-grid">
+                    <div class="fin-item">
+                        <span>Valor do Carro</span>
+                        <p>12.900 €</p>
+                    </div>
+                    <div class="fin-item">
+                        <span>Entrada (Paga)</span>
+                        <p>2.500 €</p>
+                    </div>
+                    <div class="fin-item highlight">
+                        <span>Saldo Devedor</span>
+                        <p>9.600 €</p>
+                    </div>
+                </div>
+            </section>
+            <section class="dash-card history-section full-width">
+    <h3>Extrato Detalhado de Pagamentos</h3>
+    <div class="table-container">
+        <table class="payment-table">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Método / Origem</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Entrada Inicial</td>
+                    <td>2.500,00 €</td>
+                    <td>18/12/2025</td>
+                    <td>Transf. Bancária (Milenium) - Livia Alves</td>
+                    <td><span class="status-pill status-paid">Liquidado</span></td>
+                </tr>
+                <tr>
+                    <td>Parcela 01/27</td>
+                    <td>200,00 €</td>
+                    <td>01/01/2026</td>
+                    <td>Transf. Bancária (Milenium) - Livia Alves</td>
+                    <td><span class="status-pill status-paid">Liquidado</span></td>
+                </tr>
+                <tr>
+                    <td>Parcela 02/27</td>
+                    <td>200,00 €</td>
+                    <td>31/01/2026</td>
+                    <td>Transf. Bancária (Milenium) - Luiz Augusto</td>
+                    <td><span class="status-pill status-paid">Liquidado</span></td>
+                </tr>
+                <tr>
+                    <td>Parcela 03/27</td>
+                    <td>200,00 €</td>
+                    <td>02/03/2026</td>
+                    <td>MBWay (Milenium) - Luiz Augusto</td>
+                    <td><span class="status-pill status-paid">Liquidado</span></td>
+                </tr>
+                <tr>
+                    <td>Parcela 04/27</td>
+                    <td>200,00 €</td>
+                    <td>02/04/2026</td>
+                    <td>Transf. Bancária (Milenium) - Luiz Augusto</td>
+                    <td><span class="status-pill status-paid">Liquidado</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+            <section class="dash-card installments-section full-width">
+<section class="dash-card installments-section full-width">
+                <h3>Status do Pagamento</h3>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 15%;"></div> 
+                    </div>
+                    <div class="progress-text">
+                        <p><strong>4</strong> de <strong>27</strong> parcelas pagas</p>
+                        <p>Faltam 23 parcelas (<span class="red-text">9.600 €</span>)</p>
+                    </div>
+                </div>
+
+                <hr class="dash-divider">
+
+                <div class="payment-box">
+                    <div class="payment-header">
+                        <h4>Dados para Pagamento (Próxima Fatura)</h4>
+                        <span class="status-ok">Em dia</span>
+                    </div>
+                    
+                    <div class="payment-details-grid">
+                        <div class="pay-item">
+                            <span>Proximo Vencimento</span>
+                            <p>05/05/2026</p>
+                        </div>
+                        <div class="pay-item">
+                            <span>Valor a Pagar</span>
+                            <p class="red-text">200,00 €</p>
+                        </div>
+                       <div class="payment-details-grid">
+                       <div class="pay-item iban-box full-width-mobile">
+                        <span>IBAN para Transferência (Grupo Doze)</span>
+                        <div class="iban-copy">
+                        <strong>PT50 0000 0000 0000 0000 0000 0</strong>
+                         <button class="btn-copy">Copiar</button>
+                     </div>
+                </div>
+
+                <div class="pay-item mbway-box full-width-mobile">
+                    <span>MBWay (Telemóvel)</span>
+                    <div class="iban-copy">
+                    <strong>924116588</strong>
+                    <button class="btn-copy">Copiar</button>
+                </div>
+            </div>
+        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-footer">
+                        <p>⚠️ Após o pagamento, o sistema atualizará o seu status em até 24h úteis.</p>
+                    </div>
+                </div>
+            </section>                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="dash-footer">
+        <p>© 2026 DOZE CAR - Transparência e Confiança</p>
+    </footer>
+
+</body>
+</html>

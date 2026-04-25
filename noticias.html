@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias e Dicas | DOZE CAR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">DOZE <span>CAR</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="usados.html">Carros Usados</a></li>
+                <li><a href="venda.html">Vender Carro</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="noticias.html" class="active">Notícias</a></li>
+                <li><a href="campanhas.html">Campanhas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="container">
+        <header class="noticias-header">
+            <h1>Notícias & <span>Dicas Automotivas</span></h1>
+        </header>
+
+        <section class="noticias-grid">
+            <article class="noticia-item">
+                <div class="noticia-tag">Manutenção</div>
+                <h2>10 Dicas para cuidar do seu carro</h2>
+                <a href="javascript:void(0)" class="btn-read-more" onclick="abrirNoticia('dicas')">Ler notícia completa</a>
+            </article>
+
+            <article class="noticia-item">
+                <div class="noticia-tag">Mercado</div>
+                <h2>Automático ou manual: o que compensa mais?</h2>
+                <a href="javascript:void(0)" class="btn-read-more" onclick="abrirNoticia('cambio')">Ler notícia completa</a>
+            </article>
+
+            <article class="noticia-item">
+                <div class="noticia-tag">Mitos</div>
+                <h2>Mitos sobre carros usados: verdades e mentiras</h2>
+                <a href="javascript:void(0)" class="btn-read-more" onclick="abrirNoticia('mitos')">Ler notícia completa</a>
+            </article>
+        </section>
+    </main>
+
+    <div id="modalNoticia" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharNoticia()">&times;</span>
+            <div id="conteudoNoticia"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        <section class="noticias-footer-cta">
+            <h3>Procurando seu próximo parceiro de estrada?</h3>
+            <a href="usados.html" class="btn-primary">Ver Estoque Completo</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DOZE CAR - Especialistas em Usados de Confiança.</p>
+    </footer>
+</body>
+</html>

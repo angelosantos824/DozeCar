@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DOZE CAR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">DOZE <span>CAR</span></div>
+            <h2>Área do Cliente</h2>
+            <p>Aceda aos detalhes do seu financiamento</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Utilizador</label>
+                    <input type="text" id="username" placeholder="Seu usuário" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Palavra-passe</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div id="errorMessage" style="color: #e74c3c; font-size: 0.8rem; margin-bottom: 15px; display: none;">
+                    Usuário ou senha incorretos!
+                </div>
+
+                <div class="login-options" style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 0.8rem; color: #888;">
+                    <label><input type="checkbox"> Lembrar-me</label>
+                    <a href="#" style="color: #e74c3c; text-decoration: none;">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar no Painel</button>
+            </form>
+
+            <div class="login-footer">
+                <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">
+                    Ainda não é cliente? <a href="usados.html" style="color: #fff; text-decoration: none; font-weight: bold;">Ver estoque</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -49,28 +49,37 @@ window.onload = function() {
     // 3. FUNCIONALIDADES DA ÁREA DO CLIENTE
     // ==========================================
 function copiarIBAN() {
-    // 1. Pega o texto do elemento pelo ID
-    const iban = document.getElementById("ibanText").innerText;
+    // 1. Tenta encontrar o elemento do IBAN
+    const element = document.getElementById("ibanText");
+    
+    if (!element) {
+        console.error("Erro: O elemento 'ibanText' não foi encontrado no HTML.");
+        return;
+    }
 
-    // 2. Tenta copiar para a área de transferência
+    const iban = element.innerText;
+
+    // 2. Comando de cópia moderno
     navigator.clipboard.writeText(iban).then(() => {
-        // 3. Feedback visual (opcional, mas muito bom)
+        // Feedback visual no botão
         const btn = document.querySelector(".btn-copy");
-        const textoOriginal = btn.innerText;
-        
-        btn.innerText = "✅ Copiado!";
-        btn.style.background = "#27ae60"; // Muda para verde
+        if (btn) {
+            const originalText = btn.innerText;
+            btn.innerText = "✅ Copiado!";
+            btn.style.backgroundColor = "#27ae60"; // Verde Sucesso
 
-        // Volta ao normal depois de 2 segundos
-        setTimeout(() => {
-            btn.innerText = textoOriginal;
-            btn.style.background = "#e74c3c"; // Volta ao vermelho da DOZE CAR
-        }, 2000);
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = "#e74c3c"; // Volta ao vermelho Doze Car
+            }, 2000);
+        }
     }).catch(err => {
-        console.error("Erro ao copiar: ", err);
-        alert("Não foi possível copiar o IBAN automaticamente.");
+        // Fallback caso o navegador bloqueie (comum em conexões não-https em testes)
+        console.error("Erro ao copiar via clipboard API: ", err);
+        alert("IBAN: " + iban + " (Copie manualmente)");
     });
 }
+
 const noticiasCompletas = {
     'dicas': `
         <div class="noticia-tag">Manutenção</div>
